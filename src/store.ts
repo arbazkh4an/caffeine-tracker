@@ -49,7 +49,7 @@ const LOCAL_KEY = 'caffeine-tracker-state';
 type Set = (fn: (state: CaffeineState) => Partial<CaffeineState> | void) => void;
 type Get = () => CaffeineState;
 
-export const useCaffeineStore = create<CaffeineState>((set: Set, get: Get) => ({
+export const useCaffeineStore = create<CaffeineState>((set: Set) => ({
   sources: [],
   logs: [],
   settings: defaultSettings,

@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useCaffeineStore } from './store';
-import type { Source } from './store';
 
 const EMOJI_OPTIONS = ['☕', '🧋', '🥤', '🍵', '🧃', '🥛', '🍫', '🧉', '🧊'];
 
@@ -17,7 +16,6 @@ function App() {
   const [selected, setSelected] = useState<string | null>(null);
   const [toast, setToast] = useState<string | null>(null);
   const [displayMg, setDisplayMg] = useState(0);
-  const [hydrated, setHydrated] = useState(false);
   const [showAdd, setShowAdd] = useState(false);
   const [newEmoji, setNewEmoji] = useState('☕');
   const [newName, setNewName] = useState('');
@@ -34,7 +32,6 @@ function App() {
   // Hydrate store on mount
   useEffect(() => {
     hydrate();
-    setTimeout(() => setHydrated(true), 0);
     // eslint-disable-next-line
   }, []);
 
