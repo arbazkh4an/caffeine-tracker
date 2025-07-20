@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fdf6f0;
+  color: #222;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.coffee-card {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 16px 22px;
+  background: linear-gradient(135deg, #fffdf9 80%, #f5e6d6 100%);
+  margin: 12px;
+  box-shadow: 0 6px 24px rgba(111, 78, 55, 0.13), 0 1.5px 6px 0 rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: box-shadow 0.22s, transform 0.22s;
+  cursor: pointer;
+  transform: perspective(600px) translateZ(0) scale(1) rotateX(2deg);
+  will-change: transform, box-shadow;
+}
+.coffee-card:hover {
+  box-shadow: 0 12px 32px rgba(111, 78, 55, 0.18), 0 4px 16px rgba(192,161,107,0.10);
+  transform: perspective(600px) translateY(-4px) scale(1.035) rotateX(0deg);
+  background: linear-gradient(135deg, #fffbe6 70%, #f5e6d6 100%);
+}
+.coffee-card-selected {
+  border-color: #c0a16b;
+  background: linear-gradient(135deg, #fff7e0 80%, #f5e6d6 100%);
+  box-shadow: 0 16px 40px rgba(192,161,107,0.18), 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.progress-bar-bg {
+  height: 20px;
+  width: 100%;
+  background-color: #eee;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.progress-bar-fill {
+  height: 100%;
+  background-color: #6f4e37;
+  border-radius: 10px;
+  transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+.reset-btn {
+  background-color: #c62828;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.reset-btn:hover {
+  background-color: #b71c1c;
+  box-shadow: 0 4px 16px rgba(198,40,40,0.12);
+}
+
+/* Light/dark mode toggle styles can be added here */
